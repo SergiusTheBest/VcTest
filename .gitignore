@@ -1,0 +1,10 @@
+*.opensdf
+*.sdf
+*.aps
+*.user
+*.suo
+*.ipch
+/bin
+/lib
+/obj
+/sys$command
