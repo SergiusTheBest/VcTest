@@ -2,7 +2,7 @@
 A sample that demonstrates RDP8.1 virtual channel bug
 
 ## The Bug
-If RDP 8.1 is active packets with the length of 1591-1596 bytes are working not as expected.
+If RDP 8.1 is active packets with the length of 1591-1596 bytes are working not as expected. Reproduced on Windows 8.1/2012R2.
 
 ## How to Run
 1. Build a solution with VS2013.
