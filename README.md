@@ -41,3 +41,12 @@ Windows 8.1 | Windows 8.0
 ![1000 bytes on W81](/images/test-1000-w81.png)|![1000 bytes on W80](/images/test-1000-w80.png)
 
 This is a positive case where everything goes like it should.
+
+### Sending 2000 bytes
+
+Windows 8.1 | Windows 8.0
+------------| -----------
+![2000 bytes on W81](/images/test-2000-w81.png)|![2000 bytes on W80](/images/test-2000-w80.png)
+![2000 bytes part 2 on W81](/images/test-2000-2-w81.png)|![2000 bytes part 2 on W80](/images/test-2000-2-w80.png)
+
+This is a positive case too but we see the chunk length is not 1600 on Windows 8.1.
