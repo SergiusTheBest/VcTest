@@ -1,6 +1,24 @@
 # VcTest
 A sample that demonstrates RDP8.1 virtual channel bug
 
+## The Bug
+If RDP 8.1 is active packets with the length of 1591-1596 bytes are working not as expected.
+
+## How to Run
+1. Build a solution with VS2013.
+2. Copy `VcTestAddin.dll` to `system32` (or `syswow64`, in that case you need to [disable 64-bit mstsc.exe](http://blogs.msdn.com/b/notime/archive/2012/12/15/run-32-bit-remote-desktop-rdp-on-windows-64-bit.aspx)).
+3. Import `AddinRegistry.reg`.
+4. Open a remote session via `mstsc.exe`.
+5. Copy `VcTest` into the remote session.
+6. Open command prompt and run `VcTest [packet length]`
+
+## Test Results
+For better reading the test results here are the flag values:
+```cpp
+#define CHANNEL_FLAG_FIRST      0x01
+#define CHANNEL_FLAG_LAST       0x02
+```
+
 ### Sending 1592 bytes
 
 Windows 8.1 | Windows 8.0
