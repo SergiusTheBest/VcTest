@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "VcTestAddin", "VcTestAddin\VcTestAddin.vcxproj", "{1AC3F426-3FC9-4778-AE7C-B89723240B6C}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "VcTest", "VcTest\VcTest.vcxproj", "{3A78CA68-FB06-402B-8F2D-DB9A6B663D54}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1AC3F426-3FC9-4778-AE7C-B89723240B6C}.Debug|Win32.ActiveCfg = Debug|Win32
+		{1AC3F426-3FC9-4778-AE7C-B89723240B6C}.Debug|Win32.Build.0 = Debug|Win32
+		{1AC3F426-3FC9-4778-AE7C-B89723240B6C}.Release|Win32.ActiveCfg = Release|Win32
+		{1AC3F426-3FC9-4778-AE7C-B89723240B6C}.Release|Win32.Build.0 = Release|Win32
+		{3A78CA68-FB06-402B-8F2D-DB9A6B663D54}.Debug|Win32.ActiveCfg = Debug|Win32
+		{3A78CA68-FB06-402B-8F2D-DB9A6B663D54}.Debug|Win32.Build.0 = Debug|Win32
+		{3A78CA68-FB06-402B-8F2D-DB9A6B663D54}.Release|Win32.ActiveCfg = Release|Win32
+		{3A78CA68-FB06-402B-8F2D-DB9A6B663D54}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

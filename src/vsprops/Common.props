@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Label="UserMacros">
+    <BaseDir>$(SolutionDir)..</BaseDir>
+    <DirTag>$(Platform)-$(Configuration)</DirTag>
+    <LibPath>$(BaseDir)\lib\$(DirTag)</LibPath>
+    <BinPath>$(BaseDir)\bin\$(DirTag)</BinPath>
+    <ObjPath>$(BaseDir)\obj\$(DirTag)\$(ProjectName)\</ObjPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OutDir>$(BinPath)/</OutDir>
+    <IntDir>$(ObjPath)/</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(ConfigurationType)'=='StaticLibrary'">
+    <OutDir>$(LibPath)\</OutDir>
+  </PropertyGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)' == 'Debug' ">
+    <Import Project="$(SolutionDir)\vsprops\Debug.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)' == 'Release' ">
+    <Import Project="$(SolutionDir)\vsprops\Release.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Platform)' == 'Win32' ">
+    <Import Project="$(SolutionDir)\vsprops\Win32.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Platform)' == 'x64' ">
+    <Import Project="$(SolutionDir)\vsprops\x64.props" />
+  </ImportGroup>
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <PreprocessorDefinitions>_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <MinimalRebuild>false</MinimalRebuild>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <BufferSecurityCheck>true</BufferSecurityCheck>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+    </ClCompile>
+    <Link>
+      <RegisterOutput>false</RegisterOutput>
+      <AdditionalLibraryDirectories>$(LibPath);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <ProgramDatabaseFile>$(TargetDir)$(TargetName).pdb</ProgramDatabaseFile>
+      <ImportLibrary>$(LibPath)\$(TargetName).lib</ImportLibrary>
+    </Link>
+    <Lib>
+      <OutputFile>$(LibPath)\$(ProjectName).lib</OutputFile>
+      <AdditionalLibraryDirectories>$(LibPath);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <BuildMacro Include="DirTag">
+      <Value>$(DirTag)</Value>
+    </BuildMacro>
+    <BuildMacro Include="LibPath">
+      <Value>$(LibPath)</Value>
+    </BuildMacro>
+    <BuildMacro Include="BinPath">
+      <Value>$(BinPath)</Value>
+    </BuildMacro>
+    <BuildMacro Include="ObjPath">
+      <Value>$(ObjPath)</Value>
+    </BuildMacro>
+    <BuildMacro Include="BaseDir">
+      <Value>$(BaseDir)</Value>
+    </BuildMacro>
+  </ItemGroup>
+</Project>
