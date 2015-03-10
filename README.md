@@ -11,7 +11,7 @@ If RDP 8.1 is active packets with the length of 1591-1596 bytes are working not 
  * Windows 7/2008R2 (with RDP 8.1 update)
  * Windows 8/2012
  * Windows 8.1/2012R2.
-* They are working on a fix.
+* They are working on a fix for pre-Windows 10 systems.
 
 ## How to Run
 1. Build a solution with VS2013 (or [download release binaries](//github.com/SergiusTheBest/VcTest/releases/latest)).
