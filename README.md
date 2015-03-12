@@ -9,7 +9,7 @@ If RDP 8.1 is active packets with the length of 1591-1596 bytes are working not 
 * The bug is fixed in the latest private build of Windows 10. The latest public build 9926 has the bug.
 * Affected systems: 
  * Windows 7/2008R2 (with RDP 8.1 update)
- * Windows 8/2012
+ * Windows 8/2012 (with RDP 8.1 update)
  * Windows 8.1/2012R2.
 * They are working on a fix for pre-Windows 10 systems.
 
