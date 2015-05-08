@@ -13,6 +13,11 @@ If RDP 8.1 is active packets with the length of 1591-1596 bytes are working not 
  * Windows 8.1/2012R2.
 * They are working on a fix for pre-Windows 10 systems.
 
+## Hotfixes
+After 2 months Microsoft released hotfixes for this issue:
+* https://support.microsoft.com/en-us/kb/3042841/
+* https://support.microsoft.com/en-us/kb/3042842/
+
 ## How to Run
 1. Build a solution with VS2013 (or [download release binaries](//github.com/SergiusTheBest/VcTest/releases/latest)).
 2. Copy `VcTestAddin.dll` to `system32` (or `syswow64` on 64-bit windows, in that case you need to [disable 64-bit mstsc.exe](http://blogs.msdn.com/b/notime/archive/2012/12/15/run-32-bit-remote-desktop-rdp-on-windows-64-bit.aspx)).
